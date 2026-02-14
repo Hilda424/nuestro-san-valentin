@@ -126,10 +126,7 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
-
-body.loaded {
-    visibility: visible;
-}
+        }
 
         .blog-container.active {
             display: block;
@@ -606,8 +603,7 @@ body.loaded {
                     cambiaría mi vida para siempre.
                 </p>
                 
-                <!-- IMAGEN CORREGIDA -->
-                <img src="imagenes/corazon.jpg" alt="Foto de prueba">
+                <img src="imagenes/corazon.jpg" alt="Nuestra primera foto juntos" class="image-single">
                 
                 <p>
                     Cada conversación, cada sonrisa, cada momento compartido fue construyendo algo 
@@ -665,7 +661,6 @@ body.loaded {
 
                 <!-- Galería de fotos de sus mejores momentos -->
                 <div class="image-gallery">
-                    <!-- IMAGEN CORREGIDA - Ahora está en la galería -->
                     <img src="imagenes/foto1.jpeg" alt="Momento 1">
                     <img src="imagenes/foto15.jpeg" alt="Momento 2">
                     <img src="imagenes/foto19.jpeg" alt="Momento 3">
@@ -697,7 +692,8 @@ body.loaded {
                         <p>Nosotros en la cocina, las risas, la música de fondo. Ese día 
                         aprendimos que hacer nuestra cena juntos puede ser muy especial y divertido.</p>
                     </div>
-                           </div>
+                </div>
+            </div>
         </section>
 
         <!-- SECCIÓN 3: Experiencias Compartidas -->
@@ -752,6 +748,7 @@ body.loaded {
                     estabas tú.
                 </p>
 
+                <div class="moments-list">
                     <div class="moment-item">
                         <h4>🏔️ La Montaña Conquistada</h4>
                         <p>Subir al cerro Witiligum y cuando me fuiste esa vez a Pariamarca en tu moto y poder sentirme útil ayudandote a reparar nuestra compañera de aventuras y llegar a la cima contigo hizo 
@@ -769,7 +766,6 @@ body.loaded {
                         <h4>🎡 La Fiesta de mi Pueblito</h4>
                         <p>Luces de colores, churros, chocolates y todas las fotos y videos que nos quedan de recuerdos y para revivir los mementos cada vez que los vemos. Simple pero mágico, como todo lo que hacemos juntos.</p>
                     </div>
-
                 </div>
 
                 <div class="image-gallery">
@@ -864,8 +860,6 @@ body.loaded {
                     creciendo como pareja.
                 </p>
 
-                                </div>
-
                 <div class="quote">
                     "No sé qué nos depara el futuro, pero sé que quiero vivirlo todo contigo. 
                     Cada risa, cada lágrima, cada aventura. Todo es mejor cuando estás tú."
@@ -893,19 +887,18 @@ body.loaded {
             <div class="hearts-decoration" style="margin-top: 20px;">💑 💕 💑 💕 💑</div>
             <p style="font-size: 14px; margin-top: 30px; opacity: 0.9;">
                 Con todo mi amor,<br>
-                <strong>HILDA❤️ </strong><br>
+                <strong>HILDA❤️</strong><br>
                 San Valentín 2026
             </p>
         </div>
     </div>
 
     <script>
-        // Usuarios permitidos (puedes personalizarlos)
+        // Usuarios permitidos
         const usuariosPermitidos = {
             '250725': '.- ....',
             'novio': 'novia',
-            'corazon': '1234',
-            // Agrega los usuarios que quieras
+            'corazon': '1234'
         };
 
         const loginForm = document.getElementById('loginForm');
@@ -930,7 +923,7 @@ body.loaded {
             const contrasena = document.getElementById('password').value;
             
             if (usuariosPermitidos[usuario] && usuariosPermitidos[usuario] === contrasena) {
-                mostrarMensajeLogin('¡Bienvenido/a mi amor! 💕', 'exito');
+                mostrarMensajeLogin('¡Bienvenido mi amor! 💕', 'exito');
                 localStorage.setItem('blogValentinSesion', usuario);
                 
                 setTimeout(function() {
@@ -982,13 +975,6 @@ body.loaded {
                 });
             }
         }
-
-        // Mostrar usuarios en consola
-        console.log('=== USUARIOS DE ACCESO ===');
-        console.log('Usuario: 250725 | Contraseña: .- ....');
-        console.log('Usuario: novio | Contraseña: novia');
-        console.log('Usuario: corazon | Contraseña: 1234');
-        console.log('💕 ¡Disfruta de este regalo especial!');
     </script>
 </body>
 </html>
